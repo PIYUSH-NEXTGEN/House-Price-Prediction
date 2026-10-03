@@ -1,10 +1,10 @@
 # House Price Prediction
 
-Predict house prices from property features (area, rooms, location signals, furnishing, etc.) using exploratory data analysis plus multiple regression techniques — OLS via statsmodels, Linear / Ridge / ElasticNet, PCA-based regression, RFE feature selection, and polynomial-degree comparison.
+Predict house prices from property features (area, rooms, location signals, furnishing, etc.) using exploratory data analysis plus multiple regression techniques  OLS via statsmodels, Linear / Ridge / ElasticNet, PCA-based regression, RFE feature selection, and polynomial-degree comparison.
 
 ## Dataset
 
-`Housing.csv` — 545 rows × 13 columns (546 lines including header).
+`Housing.csv` - 545 rows × 13 columns (546 lines including header).
 
 | Column | Type | Description |
 |---|---|---|
@@ -78,7 +78,7 @@ pip install pandas numpy matplotlib seaborn scikit-learn statsmodels jupyter
 # option 1: Jupyter
 jupyter notebook notebook.ipynb
 
-# option 2: VS Code — open notebook.ipynb and run cells top-to-bottom
+# option 2: VS Code - open notebook.ipynb and run cells top-to-bottom
 ```
 
 > Run cells in order: preprocessing (encoding → split → scaling) must execute before the OLS / PCA / RFE / regression cells. `Housing.csv` must sit next to `notebook.ipynb`.
@@ -97,13 +97,3 @@ House-Price-Prediction/
 
 - **Data & EDA:** pandas, numpy, matplotlib, seaborn
 - **Modelling:** scikit-learn (LinearRegression, Ridge, ElasticNet, StandardScaler, PCA, RFE, PolynomialFeatures, train_test_split, r2_score, mean_squared_error), statsmodels (OLS formula API)
-
-## Limitations & next steps
-
-- Residual non-normality / skew suggests trying log-transformed price or robust regression.
-- `PolynomialFeatures` + `RFE` cells are exploratory — no persisted best-model artifact yet.
-- Next steps: cross-validation + hyperparameter tuning (Ridge/ElasticNet alphas), `histplot` migration (notebook still calls deprecated `distplot`), save the best pipeline with `joblib`, and add a lightweight inference script.
-
-## Author
-
-Piyush Baraskar — [PIYUSH-NEXTGEN/House-Price-Prediction](https://github.com/PIYUSH-NEXTGEN/House-Price-Prediction)
